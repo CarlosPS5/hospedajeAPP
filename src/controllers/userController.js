@@ -27,7 +27,6 @@ const createUser = async (req,res) => {
                                 code: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
                             }
                     
-                    
                             const user = new models.userModel(newUser)
                             user.save()
                         
