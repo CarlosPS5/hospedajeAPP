@@ -410,12 +410,17 @@ const removeAccount = async(req,res) => {
         await models.userModel.findByIdAndDelete(req.params.id)
         res.clearCookie('accessToken')
         res.clearCookie('id')
-        res.redirect('https://app-hospedaje.herokuapp.com/')
+        const response = {
+            status: "success",
+            data: false,
+            code: 200
+        }
+        res.send(response)
 
     } catch(err) {
         res.send({
             status: "failed",
-            data: err,
+            data: 'No se ha podido borrar la cuenta',
             code: 500
         })
     }
