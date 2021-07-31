@@ -50,7 +50,7 @@ router.get('/bookings/room/:id', authenticateJWT, controllers.bookingController.
 router.post('/bookings/saveBooking', authenticateJWT, controllers.bookingController.saveBooking)
 router.get('/bookings/getBookingsByUserId/:id', authenticateJWT, controllers.bookingController.getBookingsByUserId)
 router.get('/bookings/getBookingById/:id', authenticateJWT, controllers.bookingController.getBookingById)
-router.get('/bookings/getBookingsByUserId/', (req,res) => res.redirect('http://localhost:3000'))
+
 //USER
 router.get('/user/data', authenticateJWT, controllers.userController.getUserData)
 router.post('/user/editProfile', authenticateJWT, controllers.userController.editProfile)

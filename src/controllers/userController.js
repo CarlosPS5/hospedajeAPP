@@ -410,7 +410,7 @@ const removeAccount = async(req,res) => {
         await models.userModel.findByIdAndDelete(req.params.id)
         res.clearCookie('accessToken')
         res.clearCookie('id')
-        res.redirect('http://localhost:3000')
+        res.redirect('https://app-hospedaje.herokuapp.com/')
 
     } catch(err) {
         res.send({
