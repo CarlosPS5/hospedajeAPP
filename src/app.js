@@ -1,11 +1,11 @@
 const express = require('express')
-const morgan = require('morgan')
+
 const cors = require('cors')
 var env = require('node-env-file')
 const path = require('path')
 const router = require('./routes')
 const cookieParser = require('cookie-parser')
-const jwt = require('express-jwt')
+//const jwt = require('express-jwt')
 
 const app = express();
 require('./db')
@@ -19,7 +19,7 @@ app.use(cookieParser())
 
 app.use(cors())
 
-app.use(morgan('dev'))
+
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
