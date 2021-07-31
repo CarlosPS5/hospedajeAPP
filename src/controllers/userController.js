@@ -128,7 +128,7 @@ const confirmUser = async (req,res) => {
             sameSite: true
         })
         
-        res.redirect('http://localhost:3000')
+        res.redirect('http://localhost:3500')
         //res.redirect('/')
     } catch(err) {
         res.send({
