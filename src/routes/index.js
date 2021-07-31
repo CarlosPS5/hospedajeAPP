@@ -55,6 +55,6 @@ router.get('/bookings/getBookingById/:id', authenticateJWT, controllers.bookingC
 router.get('/user/data', authenticateJWT, controllers.userController.getUserData)
 router.post('/user/editProfile', authenticateJWT, controllers.userController.editProfile)
 router.get('/user/cancelBooking/:id', authenticateJWT, controllers.userController.cancelBooking )
-router.get('/user/removeAccount/:id', authenticateJWT, controllers.userController.removeAccount )
+router.delete('/user/removeAccount/:id', authenticateJWT, controllers.userController.removeAccount )
 
 module.exports = router
