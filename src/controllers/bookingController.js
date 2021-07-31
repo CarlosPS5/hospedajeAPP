@@ -98,6 +98,7 @@ const saveBooking = async (req,res) => {
                         subject: `Reserva de ${req.body.user.nombre} ${req.body.user.apellidos} - ${room.name}`,
                         html: `El usuario <strong>${req.body.user.nombre} ${req.body.user.apellidos}</strong> con número de teléfono <strong>${req.body.user.telefono}</strong> ha reservado la habitación <strong>${room.name}</strong> durante las fechas <strong>${req.body.fechaInicio}</strong> y <strong>${req.body.fechaFin}</strong>. También puedes contactar con él a través de su email ${req.body.user.email} `,
                     }
+                    
 
                     transporter.sendMail(mailData, (error,info) => {
                         if(error) {
