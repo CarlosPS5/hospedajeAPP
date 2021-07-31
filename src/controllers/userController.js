@@ -46,7 +46,7 @@ const createUser = async (req,res) => {
                                 to: req.body.email,
                                 subject: 'Confirmación de cuenta',
                                 text: 'Bienvenido al Hospedaje Menéndez Pelayo',
-                                html: `<p>Para confirmar tu cuenta, pulsa en <strong><a href="http://localhost:3500/users/confirm/${user.code}">este enlace</a></strong></p>`
+                                html: `<p>Para confirmar tu cuenta, pulsa en <strong><a href="https://app-hospedaje.herokuapp.com/users/confirm/${user.code}">este enlace</a></strong></p>`
                             }
 
                             transporter.sendMail(mailData, (error,info) => {
@@ -127,7 +127,7 @@ const confirmUser = async (req,res) => {
             sameSite: true
         })
         
-        res.redirect('http://localhost:3500')
+        res.redirect('https://app-hospedaje.herokuapp.com/')
         //res.redirect('/')
     } catch(err) {
         res.send({
